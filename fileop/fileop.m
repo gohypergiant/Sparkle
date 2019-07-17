@@ -63,7 +63,7 @@ int main(int argc, const char *argv[])
         if (command == nil) {
             exit(SUCommandNameUTF8ParseFailure);
         }
-        
+
         NSString *filepath = [[NSString alloc] initWithUTF8String:argv[2]];
         if (filepath == nil) {
             exit(SUPathUTF8ParseFailure);

@@ -100,7 +100,11 @@
         
         // Get the file size.
         NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:self.archivePath error:nil];
-        NSUInteger expectedLength = [[attributes objectForKey:NSFileSize] unsignedIntegerValue];
+        
+        //TODO: extracting the return object to it's expected ObjectType is a work around for the few hundred "Messaging unqualified id" warnings we have in the build
+        
+        NSNumber *value = [attributes objectForKey:NSFileSize];
+        NSUInteger expectedLength = [value unsignedIntegerValue];
         if (expectedLength > 0) {
             NSFileHandle *archiveInput = [NSFileHandle fileHandleForReadingAtPath:self.archivePath];
             

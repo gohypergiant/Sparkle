@@ -26,12 +26,15 @@ NSString *const SUAppcastAttributeValueMacOS = @"macos";
 NSString *const SUTechnicalErrorInformationKey = @"SUTechnicalErrorInformation";
 
 NSString *const SUHasLaunchedBeforeKey = @"SUHasLaunchedBefore";
+NSString *const SUUpdateRelaunchingMarkerKey = @"SUUpdateRelaunchingMarker";
 NSString *const SUFeedURLKey = @"SUFeedURL";
 NSString *const SUShowReleaseNotesKey = @"SUShowReleaseNotes";
 NSString *const SUSkippedVersionKey = @"SUSkippedVersion";
 NSString *const SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 NSString *const SULastCheckTimeKey = @"SULastCheckTime";
 NSString *const SUExpectsDSASignatureKey = @"SUExpectsDSASignature";
+NSString *const SUExpectsEDSignatureKey = @"SUExpectsEDSignatureKey";
+NSString *const SUPublicEDKeyKey = @"SUPublicEDKey";
 NSString *const SUPublicDSAKeyKey = @"SUPublicDSAKey";
 NSString *const SUPublicDSAKeyFileKey = @"SUPublicDSAKeyFile";
 NSString *const SUAutomaticallyUpdateKey = @"SUAutomaticallyUpdate";
@@ -39,6 +42,7 @@ NSString *const SUAllowsAutomaticUpdatesKey = @"SUAllowsAutomaticUpdates";
 NSString *const SUEnableSystemProfilingKey = @"SUEnableSystemProfiling";
 NSString *const SUEnableAutomaticChecksKey = @"SUEnableAutomaticChecks";
 NSString *const SUSendProfileInfoKey = @"SUSendProfileInfo";
+NSString *const SUUpdateGroupIdentifierKey = @"SUUpdateGroupIdentifier";
 NSString *const SULastProfileSubmitDateKey = @"SULastProfileSubmissionDate";
 NSString *const SUPromptUserOnFirstLaunchKey = @"SUPromptUserOnFirstLaunch";
 NSString *const SUEnableJavaScriptKey = @"SUEnableJavaScript";
@@ -53,9 +57,11 @@ NSString *const SURelaunchToolNameKey = @"SURelaunchToolName";
 
 NSString *const SUAppcastAttributeDeltaFrom = @"sparkle:deltaFrom";
 NSString *const SUAppcastAttributeDSASignature = @"sparkle:dsaSignature";
+NSString *const SUAppcastAttributeEDSignature = @"sparkle:edSignature";
 NSString *const SUAppcastAttributeShortVersionString = @"sparkle:shortVersionString";
 NSString *const SUAppcastAttributeVersion = @"sparkle:version";
 NSString *const SUAppcastAttributeOsType = @"sparkle:os";
+NSString *const SUAppcastAttributePhasedRolloutInterval = @"sparkle:phasedRolloutInterval";
 
 NSString *const SUAppcastElementCriticalUpdate = @"sparkle:criticalUpdate";
 NSString *const SUAppcastElementDeltas = @"sparkle:deltas";
@@ -72,3 +78,5 @@ NSString *const SURSSElementEnclosure = @"enclosure";
 NSString *const SURSSElementLink = @"link";
 NSString *const SURSSElementPubDate = @"pubDate";
 NSString *const SURSSElementTitle = @"title";
+
+NSString *const SUXMLLanguage = @"xml:lang";

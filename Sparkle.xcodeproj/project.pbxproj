@@ -521,6 +521,8 @@
 		1A985A521C5C32BC0001163A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A985A531C5C32BD0001163A /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3772FEA813DE0B6B00F79537 /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
+		3799F09C23B9636200A6CFB9 /* Autoupdate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Autoupdate.entitlements; sourceTree = "<group>"; };
+		3799F09D23B9636F00A6CFB9 /* fileop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = fileop.entitlements; path = fileop/fileop.entitlements; sourceTree = "<group>"; };
 		4607BEA21948443800EF8DA4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Sparkle.strings; sourceTree = "<group>"; };
 		4607BEA31948443800EF8DA4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nb; path = nb.lproj/SUAutomaticUpdateAlert.xib; sourceTree = "<group>"; };
 		4607BEA41948443800EF8DA4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nb; path = nb.lproj/SUUpdateAlert.xib; sourceTree = "<group>"; };
@@ -936,6 +938,8 @@
 		0867D691FE84028FC02AAC07 /* Sparkle */ = {
 			isa = PBXGroup;
 			children = (
+				3799F09D23B9636F00A6CFB9 /* fileop.entitlements */,
+				3799F09C23B9636200A6CFB9 /* Autoupdate.entitlements */,
 				5AA96C561E0AE0DB00CA4346 /* generate_appcast */,
 				1495006D195FBBBD00BC5B5B /* Sparkle */,
 				14732BB81960EEB600593899 /* Resources */,
@@ -2400,6 +2404,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Autoupdate.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 			};
 			name = Coverage;
 		};
@@ -2453,6 +2459,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D30D94A70100DD942E /* ConfigRelaunchDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Autoupdate.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 			};
 			name = Debug;
 		};
@@ -2460,6 +2468,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA1941D40D94A70100DD942E /* ConfigRelaunchRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Autoupdate.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 			};
 			name = Release;
 		};
@@ -2467,6 +2477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4351E12CA7000E370AE /* ConfigGenerateAppcastDebug.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2474,6 +2485,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4351E12CA7000E370AE /* ConfigGenerateAppcastDebug.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 4.2;
 			};
 			name = Coverage;
 		};
@@ -2481,6 +2493,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7205C4341E12C66D00E370AE /* ConfigGenerateAppcastRelease.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -2530,6 +2543,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = fileop/fileop.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2539,6 +2554,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = fileop/fileop.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2548,6 +2565,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 722954C81D04E89500ECF9CA /* ConfigFileop.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = fileop/fileop.entitlements;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
